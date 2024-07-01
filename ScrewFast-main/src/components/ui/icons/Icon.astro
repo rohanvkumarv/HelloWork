@@ -1,0 +1,26 @@
+---
+import { Icons } from "./icons.ts";
+
+interface Path {
+  d: string;
+  class?: string;
+}
+
+const { name } = Astro.props;
+
+let icon = (Icons as any)[name] || {};
+
+let paths: Path[] = icon.paths || [];
+---
+
+{
+  icon ? (
+    <svg
+      
+    ><title></title>
+      
+    </svg>
+  ) : (
+    "Icon not found"
+  )
+}
